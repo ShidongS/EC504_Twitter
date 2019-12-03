@@ -108,7 +108,7 @@ int main(int argc, char *argv[]){
 
 	string sent;
 	cout<<"Please input your search:"<<endl;
-	cin>>sent;
+	getline(cin, sent);
 
 	cout<<"Initialization\n";
 	startt = clock(); 
