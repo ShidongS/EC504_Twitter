@@ -101,15 +101,16 @@ int main(int argc, char *argv[]){
 
 	if(TestMode) myDB.printAll();
 
-	string sent;
-	//cin>>sent;
-
 	vector<SentNode> SentArr;
 
 	if(sentCount==0) {
 		cout<<"No sentences read, please check your input\n";
 		return -1;
 	}
+
+	string sent;
+	cout<<"Please input your search:"<<endl;
+	cin>>sent;
 
 	cout<<"Initialization\n";
 	startt = clock(); 
@@ -263,7 +264,8 @@ void Initialization(int sentCount, vector<SentNode> &SentArr){
 
 void searchSent(string Sent, vector<SentNode> &SentArr, int sentCount, myDatabase myDB){
 	Initialization(sentCount, SentArr);
-	Sent = "Somewhere down the road";
+	if(Sent == "")
+		Sent = "Somewhere down the road";
     istringstream iss(Sent);
 
     do

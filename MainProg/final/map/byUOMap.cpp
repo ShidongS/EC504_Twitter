@@ -61,7 +61,7 @@ void HeapSort(vector<SentNode> &SentArr, int n);
 void printTenSent(vector<SentNode> &SentArr, int n, vector<string> sents);
 void printAllNode(vector<SentNode> &SentArr, vector<string> sents);
 //int readWords(string inputFile, myDatabase myDB, vector<string> &Twits);
-int readFile(myDatabase& myDB, vector<string> &Twits);
+int readFile(myDatabase& myDB, vector<string> &Twits, string fileName);
 
 
 int main(int argc, char *argv[]){
@@ -95,15 +95,16 @@ int main(int argc, char *argv[]){
 
 	if(TestMode) myDB.printAll();
 
-	string sent;
-	//cin>>sent;
-
 	vector<SentNode> SentArr;
 
 	if(sentCount==0) {
 		cout<<"No sentences read, please check your input\n";
 		return -1;
 	}
+
+	string sent;
+	cout<<"Please input your search:"<<endl;
+	cin>>sent;
 
 	cout<<"Initialization\n";
 	startt = clock(); 
@@ -148,10 +149,10 @@ int main(int argc, char *argv[]){
 	return 0;
 }
 
-int readFile(myDatabase& myDB, vector<string> &Twits){
+int readFile(myDatabase& myDB, vector<string> &Twits, string fileName){
 	char line[300];
 	int i = 1;
-	ifstream myfile ("abcnews-date-text.csv");
+	ifstream myfile (fileName);
 
 	Twits.push_back(""); // Fill up the first one line
 
@@ -252,7 +253,8 @@ void Initialization(int sentCount, vector<SentNode> &SentArr){
 
 void searchSent(string Sent, vector<SentNode> &SentArr, int sentCount, myDatabase myDB){
 	Initialization(sentCount, SentArr);
-	Sent = "Somewhere down the road";
+	if(Sent == "")
+		Sent = "Somewhere down the road";
     istringstream iss(Sent);
 
     do
