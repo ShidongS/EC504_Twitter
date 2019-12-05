@@ -5,4 +5,6 @@ To run these codes, just clone the repository, go into the folder and make(makef
 make
 ./byUOmap abcnews-date-text.csv
 ```
+GUI codes are in the 'Qt_GUI' folder and can only operate when Qt is installed in the desktop.<br/>
+The final result screenshot is shown below. Two timinng figures are also included in the repository named 'Reading.pdf' and 'Searching.pdf'.<br/>
 ![image](https://github.com/ShidongS/EC504_Twitter/blob/master/Qt_GUI/截屏2019-12-0421.17.41.png)
