@@ -7,5 +7,5 @@ make
 ```
 GUI codes are in the 'Qt_GUI' folder and can only operate when Qt is installed in the desktop.<br/>
 The final result screenshot is shown below. Two timinng figures are also included in the repository named 'Reading.pdf' and 'Searching.pdf'. Their timing data comes from the /MainProg/timing/ folder.<br/>
-![image](https://github.com/ShidongS/EC504_Twitter/blob/master/Qt_GUI/截屏2019-12-0421.17.41.png)
+![image](https://github.com/ShidongS/EC504_Twitter/blob/master/Qt_GUI/截屏2019-12-0421.17.41.png)<br/>
 Please discard all other codes because they are all temporary codes, some may have bugs.
